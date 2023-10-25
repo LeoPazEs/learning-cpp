@@ -6,7 +6,7 @@
 int main(){
 
     //Declare and initialize the variables
-    // If dont have the f or L in the end, it will be saved as double as default.
+    // If dont have the f or L at the end, it will be saved as double as default.
     float number1 {1.12345678901234567890f}; // Precision : 7 rest will be garbage
     double number2 {1.12345678901234567890}; // Precision : 15 rest will be garbage
     long double number3  {1.12345678901234567890L};
