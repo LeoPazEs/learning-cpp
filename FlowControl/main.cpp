@@ -67,6 +67,10 @@ int main()
             break;
     }
 
+    // Ternary Expression
+    // result has to be same type or convertible
+    bool result = false == true ? true:false;
+    std::cout << result << std::endl;
 
 
     return 0;
