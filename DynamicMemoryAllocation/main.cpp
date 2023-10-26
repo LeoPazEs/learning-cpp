@@ -34,7 +34,21 @@ int main(int argc, char const *argv[])
         std::cout << "Cought exception:" << ex.what() << std::endl;
     }
 
-    int *new_int2{new(std::nothrow) int}; // If pointer faill it will return nullptr.
+    int *new_int2{new (std::nothrow) int}; // If pointer faill it will return nullptr.
+
+    // Check pointer without nullptr
+    int *p_number_null{};
+
+    if (p_number_null)
+    {
+        std::cout << "NOT NULL" << std::endl;
+    }
+    else
+    {
+        std::cout << "NULL" << std::endl;
+        delete p_number_null; // IS OK
+        p_number_null = nullptr;
+    }
 
     return 0;
 }
