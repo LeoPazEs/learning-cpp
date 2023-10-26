@@ -24,5 +24,17 @@ int main(int argc, char const *argv[])
         std::cout << "NULLPTR" << std::endl;
     }
 
+    // Check if new was a success
+    try
+    {
+        int *new_int{new int};
+    }
+    catch (std::exception &ex)
+    {
+        std::cout << "Cought exception:" << ex.what() << std::endl;
+    }
+
+    int *new_int2{new(std::nothrow) int}; // If pointer faill it will return nullptr.
+
     return 0;
 }
