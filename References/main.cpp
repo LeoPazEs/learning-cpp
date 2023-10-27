@@ -24,5 +24,14 @@ int main(int argc, char const *argv[])
     ref_int_data = other_int_data; // This is ASSIGNING the value of other_int_data to int_data
     std::cout << int_data << std::endl;
 
+    // Const Ref
+    const int& const_ref_int_data {int_data};
+    // const_ref_int_data = 10; compile error
+
+    //Const pointer 
+    const int* const const_ptr_to_const{&int_data}; // Const pointer that poinst to a const variable
+    const int* const_ptr{&int_data}; // Const pointer to not const variable
+
+
     return 0;
 }
