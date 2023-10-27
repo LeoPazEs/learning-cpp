@@ -3,6 +3,7 @@
 int main(int argc, char const *argv[])
 {
     size_t size{10};
+    // HEAP
     double *p_salaries{new double[size]};            // garbage
     int *p_students{new (std::nothrow) int[size]{}}; // 0
     double *p_scores{new (std::nothrow) double[size]{7, 2, 3, 4, 5}};
