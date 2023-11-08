@@ -14,10 +14,13 @@ int main(int argc, char const *argv[])
     std::cout << "result: " << result << std::endl;
 
     int max_result = max(10, 20);
-    std::cout << "result: " << max_result << std::endl;
+    std::cout << "max result: " << max_result << std::endl;
+
+    double max_result_double = max(double {10}, double {20});
+    std::cout << "max result overload double: " << max_result_double << std::endl;
 
     int min_result = min(10, 20);
-    std::cout << "result: " << min_result << std::endl;
+    std::cout << "min result: " << min_result << std::endl;
 
     // Passing by value -> Makes a copy.
     int age = 10;
@@ -57,6 +60,7 @@ void say_age_pointer(int *age)
     std::cout << "CALL POINTER AGE: " << *age << std::endl;
 }
 
+// Passing by reference
 void say_age_reference(int& age)
 {
     ++age;
