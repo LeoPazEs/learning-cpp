@@ -8,7 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "-std=c++20",
-                "${file}",
+                "${fileDirname}//*.cpp",
                 "-o",
                 "${fileDirname}/build/${fileBasenameNoExtension}"
             ],
@@ -33,7 +33,7 @@
                 "-fansi-escape-codes",
                 "-g",
                 "-std=c++20",
-                "${file}",
+                "${fileDirname}//*.cpp",
                 "-o",
                 "${fileDirname}/build/${fileBasenameNoExtension}"
             ],
