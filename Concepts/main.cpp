@@ -29,6 +29,12 @@ T mult(T a, T b)
     return a * b;
 }
 
+template <typename T>
+concept TinyType = requires (T t){
+    sizeof(T) <= 4; // Simple requirement : Only enforces syntax
+    requires sizeof(T) <= 4; // Nested requirements
+};
+
 int main(int argc, char const *argv[])
 {
     char a_0{10};
