@@ -1,5 +1,7 @@
 #include <iostream>
+#include <string.h>
 #include "compare.hpp"
+
 
 // You have to compile all the files.
 
@@ -59,6 +61,12 @@ template <typename T>
 T maximum(T a, T b)
 {
     return (a > b) ? a : b;
+}
+
+// Template Specialization
+template<>
+const char * maximum<const char*> (const char* a, const char* b){
+    return (strcmp(a, b) > 0) ? a : b;
 }
 
 // Passing by value -> Makes a copy.
