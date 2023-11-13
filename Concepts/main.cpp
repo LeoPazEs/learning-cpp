@@ -53,6 +53,12 @@ T add_requires(T a, T b)
     return a + b;
 }
 
+// Also a template with a concept to a type
+std::integral auto divide(std::integral auto a, std::integral auto b)
+{
+    return a / b;
+}
+
 int main(int argc, char const *argv[])
 {
     char a_0{10};
